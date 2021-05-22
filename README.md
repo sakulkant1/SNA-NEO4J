@@ -1,3 +1,5 @@
+สำหรับ IMPORT และสร้าง Node ที่เชื่อม Relations
+
 <<<<<<< CODE : Import Data From CSV >>>>>>>
 
 load csv with headers from 
@@ -9,7 +11,7 @@ merge (t:transactionnode {Running_Number_node : row.Running_Number , trans_date_
 merge(a)-[h:has_transaction]->(t)
 merge(t)-[p:purchased]->(m);
 
-
+Libary สำหรับใช้คำสั่ง Betweenness เพื่อนำมาวิเคราะห์ข้อมูล
 <<<<<<<< Betweenness : fullname_node >>>>>>>>>>>
 
 CALL gds.betweenness.stream({
@@ -41,7 +43,7 @@ YIELD nodeId, score
 RETURN gds.util.asNode(nodeId).merchant_node as ID,score
 ORDER BY score DESC LIMIT 5
 
-
+Libary สำหรับใช้คำสั่ง Drgree เพื่อนำมาวิเคราะห์ข้อมูล
 <<<<<<<< Drgree : account_holder_node >>>>>>>>>>>
 
 MATCH (a:account_holder_node)
